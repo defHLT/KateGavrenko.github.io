@@ -1,0 +1,162 @@
+body{
+	background-image: url(http://luxfon.com/images/201203/luxfon.com_9882.jpg);
+}
+
+header{
+	border: 3px solid #CD5C5C;
+	padding-top: 20px;
+	background-color: white;
+}
+
+#carousel-example-generic{
+	border-left: 3px solid #CD5C5C;
+	border-right: 3px solid #CD5C5C;;
+	border-bottom: 3px solid #CD5C5C;
+}
+
+#servises, #masters, #contacts, #education{
+	background-color: white;
+	border-left: 3px solid #CD5C5C;
+	border-right: 3px solid #CD5C5C;
+	border-bottom: 3px solid #CD5C5C;
+}
+
+ #sale, #gallery{
+ 	border-left: 3px solid #CD5C5C;
+	border-right: 3px solid #CD5C5C;
+	background-color: white;
+ }
+
+ #contacts, #gallery{
+ 	border-top: 3px solid #CD5C5C;
+ 	padding-bottom: 20px;
+ }
+
+#education, #sale{
+ padding-bottom: 20px;
+ }
+
+ footer{
+ 	border-left: 3px solid #CD5C5C;
+	border-right: 3px solid #CD5C5C;
+	border-bottom: 3px solid #CD5C5C;
+	background-color: white;
+	opacity: 0.7;
+	color: #CD5C5C;
+ }
+
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.btn-block{
+	background-color: #CD5C5C !important;
+	border: none !important;
+	color: white !important;
+	font-weight: bold !important;
+	padding-left: 0px;
+}
+
+.fairy{
+   font-family: 'Lobster', cursive !important;
+   font-size: 26px !important;;
+   color: #CD5C5C !important;
+   padding-right: 1px !important;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #CD5C5C !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: #CD5C5C !important;
+}
+
+p, a, td, h2, th{
+	font-family: 'Comfortaa', cursive !important;
+}
+p, a, td{
+	font-weight: 600;
+	font-size: 16px;
+}
+
+th{
+	font-weight: 800;
+	font-size: 20px;
+}
+
+.adress, .phones{
+	margin-top: 30px;
+}
+
+.up{
+	background-color: red;
+	border-radius: 100%;
+	height: 70px;
+	border: none;
+	position: fixed;
+	top: 550px;
+	right: 38px;
+}
+
+.up > a{
+	color: white;
+}
+
+.name{
+	margin-top: 10px !important;
+	/*margin-right: 50px !important;*/
+	text-align: center;
+}
+
+.thumbnail{
+	height: 300px !important;
+	width: 250px !important;
+}
+
+.photo{
+	margin-left: 0px !important;
+}
+
+.newPhoto{
+	height: 620px;
+	width: 490px !important;
+    position: absolute !important;
+   	left: 32%;
+	top: 1650px;
+}
+
+.newBG{
+	opacity: 0.3;
+}
+
+.newImg{
+	height: 580px;
+	width: 470px;
+	border: 3px solid white;
+	position: absolute !important;
+   	left: 10px;
+	top: 1170px;
+}
+
+.hide{
+	visibility: hidden;
+}
+
+.close{
+	width: 1200px;
+	height: 760px;
+	position: absolute !important;
+   	left: 70px;
+	top: 2800px;
+}
+
+.photo_educ{
+	margin-bottom: 20px !important;
+}
+
+.carousel-caption > h2{
+	margin-bottom: 50px;
+}
