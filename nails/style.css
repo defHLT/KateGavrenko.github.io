@@ -97,7 +97,7 @@ th{
 	height: 70px;
 	border: none;
 	position: fixed;
-	top: 550px;
+	top: 85%;
 	right: 38px;
 }
 
@@ -161,11 +161,3 @@ th{
 	margin-bottom: 50px;
 }
 
-@media screen and (max-width:768px){
-	.up{
-		position: fixed;
-	    top: 410px;
-	    right: 0px;
-	    height: 70px;
-	}
-}
