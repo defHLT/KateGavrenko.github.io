@@ -160,3 +160,10 @@ th{
 .carousel-caption > h2{
 	margin-bottom: 50px;
 }
+
+@media screen and (max-width:768px){
+	.up{
+		position: fixed;
+	    top: 350px;
+	}
+}
