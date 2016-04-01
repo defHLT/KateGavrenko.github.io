@@ -164,7 +164,8 @@ th{
 @media screen and (max-width:768px){
 	.up{
 		position: fixed;
-	    top: 380px;
+	    top: 480px;
 	    right: 0px;
+	    height: 40px;
 	}
 }
