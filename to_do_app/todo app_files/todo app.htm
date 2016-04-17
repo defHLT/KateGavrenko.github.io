@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+
+    <meta charset="UTF-8">
+    <title>todo app</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <style type="text/css">
+        .content {
+            width: 500px;
+            margin: auto;
+        }
+        .new-item {
+            margin: 20px 0;
+        }
+        .table tr .remove span {
+            display: none;
+            cursor: pointer;
+        }
+        .table tr:hover .remove span {
+            display: block;
+        }
+        
+        .checked .title {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+
+<script type="text/javascript">
+ function bindCheckboxes() {
+   var checks = document.querySelectorAll("[type='checkbox']");
+   for (var i=0; i<checks.length; i++) {
+     var check = checks[i];
+     bindCheckbox(check);
+   }
+ }
+ function bindCheckbox(check) {
+  check.addEventListener('click', function(e) {
+   var s = e.target.parentNode.parentNode;
+   if (!e.target.checked) {
+     s.classList.remove('checked');
+   } else {
+     s.classList.add('checked');    
+   }
+  });
+ }
+ function todo() {
+   var buttonCreate = document.querySelector('button');
+   buttonCreate.addEventListener('click', function(e) {
+    e.preventDefault();
+    var field = document.querySelector(".form-control");
+    var table = document.querySelector('table');
+    var row = table.insertRow(0);
+    var cell0 = row.insertCell(0);
+    var span1 = document.createElement('span');
+    span1.classList.add('title');
+    span1.innerHTML = field.value;
+    var checkBox= document.createElement('input');
+    checkBox.setAttribute('type','checkbox');
+    cell0.appendChild(checkBox);
+    cell0.appendChild(span1);
+    var cell1 = row.insertCell(1);
+    cell1.classList.add('remove')
+    cell1.classList.add('text-right')
+    row.appendChild(cell1);
+    var span2= document.createElement('span');
+    span2.classList.add('glyphicon');
+    span2.classList.add('glyphicon-remove');
+    cell1.appendChild(span2);
+    bindCheckbox(checkBox);
+    bindRemoveIcon(span2);
+   });
+   function bindRemoveIcon(remove) {
+     remove.addEventListener('click', function(e){
+         var parent = e.target.parentNode.parentNode;
+         var grandParent = parent.parentNode;
+         grandParent.removeChild(parent);
+      });
+   }
+   bindCheckboxes();
+    var removes = document.querySelectorAll('.glyphicon.glyphicon-remove');
+    for( var i = 0; i < removes.length; i++) {
+       var remove = removes[i];
+       bindRemoveIcon(remove);
+    }
+}
+document.addEventListener("DOMContentLoaded", todo, true);
+</script>
+
+
+
+
+<body>
+
+<div class="content">
+
+    <div class="todo-app">
+
+        <div class="new-item">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Название задачи" type="text">
+                </div>
+                <button type="submit" class="btn btn-default">Создать</button>
+            </form>
+        </div>
+
+        <table class="table table-striped">
+        </table>
+    </div>
+
+  </div>
+ </body>
+</html>
