@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+
+    <meta charset="UTF-8">
+    <title>todo app</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <style type="text/css">
+
+        body {
+             background-image: url(http://www.zingerbugimages.com/backgrounds/light_teal_diagonal_stripes_seamless_background_pattern.jpg);
+        }
+
+        h1 {
+            margin-left: 30%;
+            -webkit-text-shadow: 5px 0px 5px rgba(25, 90, 152, 0.47);
+            -moz-text-shadow: 5px 0px 5px rgba(25, 90, 152, 0.47);
+            text-shadow: 5px 0px 5px rgba(25, 90, 152, 0.47);
+        }
+
+        tbody{
+            background-color: #F8F8FF;
+        }
+      
+        .btn-default{
+           font-weight: bold;
+           color: #6A5ACD;
+        }
+
+        .content {
+            width: 500px;
+            margin: auto;
+        }
+
+        .new-item {
+            margin: 20px 20%;
+        }
+
+        .table, button, input {
+            border: 2px solid #B0C4DE !important;
+        }
+
+        .table tr .remove span {
+            display: none;
+            cursor: pointer;
+        }
+
+        .table tr:hover .remove span {
+            display: block;
+        }
+        
+        .checked .title {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+
+
+<script type="text/javascript">
+ function bindCheckboxes() {
+   var checks = document.querySelectorAll("[type='checkbox']");
+   for (var i = 0; i < checks.length; i++) {
+     bindCheckbox(checks[i]);
+   }
+ }
+
+ function bindCheckbox(check) {
+  check.addEventListener('click', function(e) {
+   var s = e.target.parentNode.parentNode;
+   if (!e.target.checked) {
+     s.classList.remove('checked');
+   } else {
+     s.classList.add('checked');    
+   }
+  });
+ }
+
+function bindRemoveIcon(remove) {
+ remove.addEventListener('click', function(e){
+     var parent = e.target.parentNode.parentNode;
+     var grandParent = parent.parentNode;
+     grandParent.removeChild(parent);
+  });
+}
+
+ function todo() {
+   
+    var buttonCreate = document.querySelector('button');
+    var field = document.querySelector(".form-control");
+     
+    buttonCreate.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    if (field.value.trim().length == 0) {
+      return false;
+    } else{
+      addRow(field.value);
+    }
+
+    field.value = ' ';
+   });
+
+   bindCheckboxes();
+   var removes = document.querySelectorAll('.glyphicon.glyphicon-remove');
+   for( var i = 0; i < removes.length; i++) {
+      var remove = removes[i];
+      bindRemoveIcon(remove);
+   }
+
+   var createItem = document.querySelector('button');
+    createItem.addEventListener('click', function(){
+     save();
+   })
+
+    function load(){
+        var storedValue = localStorage.getItem('my_list');
+        if(storedValue){
+             var texts = JSON.parse(storedValue);
+             for (var i = 0; i < texts.length; i++) {
+                addRow(texts[i]);
+             }
+        }
+    }
+    load();
+
+     function save(){
+      var tasks = document.querySelectorAll('tr');
+      var texts = [];
+      for (var i = 0; i < tasks.length ; i++) {
+            texts.push(tasks[i].querySelector('.title').innerHTML);
+          };
+             localStorage.setItem("my_list", JSON.stringify(texts));
+     }
+
+     var removeFields = document.querySelectorAll('.glyphicon-remove');
+     for (var i = 0; i < removeFields.length; i++) {
+     removeFields[i].addEventListener('click', function(){
+             save();
+    
+     })
+   }
+}
+
+
+ function addRow(text) {
+    var table = document.querySelector('table');
+    var row = table.insertRow(0);
+    var cell0 = row.insertCell(0);
+    var title = document.createElement('span');
+    title.classList.add('title');
+    title.innerHTML = text;
+    var checkBox= document.createElement('input');
+    checkBox.setAttribute('type','checkbox');
+    cell0.appendChild(checkBox);
+    cell0.appendChild(title);
+    var cell1 = row.insertCell(1);
+    cell1.classList.add('remove')
+    cell1.classList.add('text-right')
+    row.appendChild(cell1);
+    var span2= document.createElement('span');
+    span2.classList.add('glyphicon');
+    span2.classList.add('glyphicon-remove');
+    cell1.appendChild(span2);
+    bindCheckbox(checkBox);
+    bindRemoveIcon(span2);
+ }
+   
+
+document.addEventListener("DOMContentLoaded", todo, true);
+</script>
+
+
+<body>
+
+<div class="content">
+
+ <h1>Todo list</h1>
+    <div class="todo-app">
+
+        <div class="new-item">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Название задачи" type="text">
+                </div>
+                <button type="submit" class="btn btn-default">Create</button>
+            </form>
+        </div>
+
+        <table class="table table-hover">
+           
+        </table>
+    </div>
+
+</div>
+
+
+</body>
+</html>
