@@ -159,12 +159,12 @@ function bindRemoveIcon(remove) {
     cell1.classList.add('remove')
     cell1.classList.add('text-right')
     row.appendChild(cell1);
-    var span2= document.createElement('span');
-    span2.classList.add('glyphicon');
-    span2.classList.add('glyphicon-remove');
-    cell1.appendChild(span2);
+    var remove_icon= document.createElement('span');
+    remove_icon.classList.add('glyphicon');
+    remove_icon.classList.add('glyphicon-remove');
+    cell1.appendChild(remove_icon);
     bindCheckbox(checkBox);
-    bindRemoveIcon(span2);
+    bindRemoveIcon(remove_icon);
  }
    
 
