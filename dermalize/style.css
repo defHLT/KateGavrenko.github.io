@@ -1,0 +1,390 @@
+nav {
+    background-color: black !important;
+    border-color: black  !important;
+  /*  padding-bottom: 20px;*/
+}
+.navbar-default {
+    border: 0;
+ }
+.navbar-brand {
+    width: 200px;
+}
+.navbar-brand > img {
+	width: 100%;
+}
+
+.navbar-right {
+	margin-top: 20px !important;
+}
+
+.navbar-nav > li > a {
+    padding-left: 7px;
+}
+
+.nav > li > a:last-child {
+   padding-top: 0 !important;
+}
+
+.nav > li > a {
+    color: white !important;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.nav > li > a:hover {
+    color: #26a9e0 !important;
+}
+
+.vk {
+    padding-top: 5px !important;
+}
+
+.navbar-brand {
+	margin-left: 20px;
+}
+
+.form-control {
+    padding: 3px 12px !important;
+}
+
+#carousel-example-generic {
+    margin-top: 90px;
+}
+
+#derma {
+    background-color: #0772a4;
+    color: white;
+}
+
+#how_to_use {
+    color: #0772a4;
+}
+
+#derma, #how_to_use {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+#derma > .container > h4 {
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+#derma > .container > p, #how_to_use > .container > p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#derma > .container > p > span {
+    color: #e39221;
+}
+
+#derma > .container > .row > div {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#derma > .container > .row {
+    padding-top: 20px;
+}
+
+.photo_derma > div > img {
+    width: 100%;
+}
+
+#how_to_use > .container > h4 {
+    font-weight: bold;
+    font-size: 20px;
+    font-size: 3em;
+    padding-bottom: 20px;
+}
+
+hr.star-light {
+    margin: 5px auto 30px;
+    padding: 0;
+    max-width: 310px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    border-color: #0772a4;
+}
+
+#how_to_use .nav>li>a {
+    padding: 9px 16px;
+    font-size: 23px;
+    background-color: #0772a4;
+}
+
+#how_to_use .row {
+    background-color: #066695;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#how_to_use .nav {
+    padding-left: 120px;
+}
+
+.nav-pills>li+li {
+    margin-left: 4px !important;
+}
+
+.nav-pills>li.active>a {
+    color: #ffffff;
+    background-color: #2c3e50 !important;
+}
+
+.nav-pills>li.active>a:hover {
+    color: #F29221;
+}
+
+.panel-body {
+    background-color: #0772a4;
+    margin-top: 10px; 
+}
+
+#how_to_use h4 {
+    color: #0772a4;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#how_to_use iframe {
+    padding-top: 15px;
+}
+
+#how_to_use .row h4 {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#how_to_use p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.advise {
+    background-color: white !important;
+}
+
+.advise h4 {
+   color: #0772a4 !important;
+   font-size: 26px !important;
+}
+
+.advise ul li, .advise ol li, .advise p {
+    font-size: 20px;
+}
+
+#questions {
+    background-color: #0772a4;
+    color: white; 
+    font-family: 'PT Sans Narrow', sans-serif;
+    padding-bottom: 40px;
+}
+
+#questions > .container > h4 {
+    font-weight: bold;
+    font-size: 20px;
+    font-size: 3em;
+    padding-top: 20px;
+}
+
+#questions hr.star-light {
+    margin: 5px auto 30px;
+    padding: 0;
+    max-width: 310px;
+    border: 0;
+    border-top: solid 5px;
+    text-align: center;
+    border-color: white;
+}
+
+#questions a {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none; 
+}
+
+#questions a:hover {
+    color: #e39221;
+}
+
+#questions p {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+form {
+    border: 2px solid white;
+    border-radius: 5px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+legend {
+    color: white !important;
+    font-weight: bold;
+    border-bottom: 0 !important;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 80px !important;
+    font-size: 20px !important;
+    border: 2px solid white !important;
+}
+
+label {
+    font-size: 18px;
+    text-align: right !important;
+}
+
+.form-control {
+   font-size: 20px !important;
+}
+
+#contacts {
+    background-color: #0772a4;
+}
+
+#text-map {
+    background-color: white;
+    height: 200px;
+}
+
+.text {
+    margin-top: 10%;
+    margin-left: 10%;
+    color: #0772a4; 
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#contacts iframe {
+    height: 200px;
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+}
+
+footer {
+    background-color: #0772a4;
+}
+
+footer .row {
+    color: white;
+    font-size: 14px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    font-weight: bold;
+    margin-right: 0;
+    border: 2px solid white;
+}
+
+.slideanim {
+    visibility:hidden;
+}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;    
+      animation-duration: 1s;   
+      -webkit-animation-duration: 1s;
+      visibility: visible;          
+}
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }   
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+
+
+.scroll{
+    border-top: 55px solid transparent;
+    margin-top: -55px;
+    padding-top: 60px !important; /* паддинги - без проблем */
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {  
+
+  #carousel-example-generic {
+        margin-top: 70px;
+  }
+
+  .form-horizontal{
+        margin-top: 20px;
+  }
+
+  #how_to_use .nav {
+        padding-left: 350px;
+  }
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {  
+
+    #carousel-example-generic {
+        margin-top: 70px;
+    }
+
+
+    .nav > li > a{
+        padding: 1px 10px !important;
+    }
+
+    nav{
+        padding-bottom: 10px;
+    }
+
+    .form-horizontal{
+        margin-top: 20px;
+    }
+
+    #how_to_use .nav {
+        padding-left: 250px;
+    }
+}
+
+@media screen and (max-width:768px) {
+
+    #derma, #how_to_use {
+    padding-top: 60px;
+    }
+
+     #how_to_use .nav {
+        padding-left: 100px;
+    }
+
+    #contacts iframe {
+    height: 200px;
+    padding-right: 0 !important;
+    }  
+
+    .text{
+        margin-top: 3%;
+    }
+}
