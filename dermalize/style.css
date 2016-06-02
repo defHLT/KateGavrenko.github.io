@@ -59,7 +59,8 @@ nav {
 }
 
 #how_to_use {
-    color: #0772a4;
+    color: white;
+    background-color: #0772a4;
 }
 
 #derma, #how_to_use {
@@ -110,7 +111,7 @@ hr.star-light {
     border: 0;
     border-top: solid 5px;
     text-align: center;
-    border-color: #0772a4;
+    border-color: white;
 }
 
 #how_to_use .nav>li>a {
@@ -148,7 +149,7 @@ hr.star-light {
 }
 
 #how_to_use h4 {
-    color: #0772a4;
+    color: white;
     font-weight: bold;
     font-size: 20px;
 }
@@ -169,11 +170,11 @@ hr.star-light {
 }
 
 .advise {
-    background-color: white !important;
+    background-color: #0772a4 !important;
 }
 
 .advise h4 {
-   color: #0772a4 !important;
+   color: white !important;
    font-size: 26px !important;
 }
 
